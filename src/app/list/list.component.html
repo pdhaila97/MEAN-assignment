@@ -1,0 +1,18 @@
+<div class="list">
+    <ul>
+        <accordion>
+        <li *ngFor="let member of members">
+            <accordion-group [heading] = "member.name">
+                <p>ID : {{member._id}}<br> Email : {{member.email}}<br>Address: {{member.address}}<br>Phone Number: {{member.phone}}</p>
+                <button class = "btn btn-primary" id="updateBtn" (click)='populateInputs(member)'>Update</button>
+                <button class = "btn btn-primary" id="deleteBtn" (click)='delete(member)'>Delete</button>
+            </accordion-group>
+        </li>
+    </accordion>
+    </ul>
+</div>
+<div>
+    <button class = "btn btn-primary" id="prevPage" (click)='prevPage()'>&lt;&lt;</button>
+    <button class = "btn btn-primary" id="nextPage" (click)='nextPage()'>&gt;&gt;</button>
+    <span class="resultsDisplay">Showing results {{firstElementOnPage}} - {{lastElementOnPage}}</span>
+</div>

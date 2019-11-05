@@ -1,0 +1,12 @@
+<body>
+<h1>Add/Edit</h1>
+    <div class="form-group">
+        <input type="text" class="form-control" [value]="inputVals.name" placeholder="Name" #nameInput (keyup.enter)='validateInputs(nameInput.value,emailInput.value, addressInput.value, phoneInput.value)'>
+        <!-- <input type="text" [value]="inputVals.id" [disabled]="inputVals.idDisabled" placeholder="ID" #idInput (keyup.enter)='validateInputs(nameInput.value,idInput.value,emailInput.value)'> -->
+        <input type="text" class="form-control" [value]="inputVals.email" placeholder="Email" #emailInput (keyup.enter)='validateInputs(nameInput.value,emailInput.value, addressInput.value, phoneInput.value)'> 
+        <input type="textarea" class="form-control" [value]="inputVals.address" placeholder="Address" #addressInput (keyup.enter)='validateInputs(nameInput.value,emailInput.value, addressInput.value, phoneInput.value)'> 
+        <input type="text" class="form-control" [value]="inputVals.phone" placeholder="Phone Number" #phoneInput (keyup.enter)='validateInputs(nameInput.value,emailInput.value, addressInput.value, phoneInput.value)'> 
+        <input type="submit" class = "btn btn-primary" placeholder="Submit" (click)='validateInputs(nameInput.value,emailInput.value, addressInput.value, phoneInput.value)'>
+    </div>
+<p *ngIf='regInvalid' id="errRegInvalidInp">Invalid inputs, Please enter all fields.</p>
+</body>

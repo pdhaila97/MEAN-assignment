@@ -1,0 +1,9 @@
+body{
+    position: absolute;
+    height: 84vh;
+    top: 8vh;
+    left: 0%;
+    width: 15vw;
+    background-color: #C14747;
+    padding: 8px;
+}
